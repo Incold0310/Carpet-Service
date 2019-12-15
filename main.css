@@ -1,0 +1,141 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#divBeforeMenu img {
+	width: 150px;
+}
+#divBeforeMenu .offset-2 i{
+	float: left;
+	border: none;
+	font-size: 50px;
+	margin-right: 5px;
+}
+#divBeforeMenu .offset-2 {
+	font-size: 15px;
+}
+#divBeforeMenu .row div {
+	padding: 0;
+}
+.fixedNavigation {
+	background: white;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+}
+#menu .row {
+	background: white;
+	margin-top: 10px;
+}
+#menu ul a {
+	font-size: 25px;
+	color: black;
+}
+.activeMenuLink {
+	border: 3px solid #00cc00;
+}
+.activeMenuLink a {
+	color: #00cc00 !important;
+}
+#mainSlider img {
+	height: 500px;
+}
+#mainSlider .carousel-indicators li {
+	width: 20px !important;
+	height: 20px !important;
+	border-radius: 50%;
+}
+#aboutCarpets p {
+	font-size: 125%;
+}
+#useAdvantages i {
+	font-size: 300%;
+	margin-top: 5%;
+	color: rgb(37, 122, 51);
+}
+#useAdvantages p {
+	font-size: 120%;
+}
+#useAdvantages .col:not(:last-of-type) {
+	border-right: 0.5px solid rgb(170, 170, 170);
+}
+#useAdvantages .col:hover {
+	background: rgb(37, 122, 51);
+	color: white;
+}
+#useAdvantages .col:hover > i {
+	color: rgb(193, 255, 131);
+}
+#priceList h5 {
+	color: rgb(150, 150, 150);
+}
+#finishPrice {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #00cc00;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #00cc00;
+}
+#finishPrice span:nth-child(1) {
+	display: block;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 25%;
+}
+#finishPrice span:nth-child(2) {
+	display: block;
+	font-size: 20px;
+}
+.requiredField:after {
+	content: "*";
+	color: red;
+}
+.needValidation {
+	border: 1px solid red;
+}
+#ourContacts {
+	background: rgb(14, 115, 33);
+}
+#btnGroupInFeedback button {
+	font-size: 150% !important;
+}
+#btnGroupInFeedback button i {
+	font-size: 150% !important;
+	position: absolute;
+	right: 10%;
+	visibility: hidden;
+}
+#btnGroupInFeedback button:hover > i {
+	visibility: visible;
+}
+#feedback small {
+	display: none;
+}
+.needValidation + small {
+	color: red !important;
+	display: block !important;
+}
+.input-group .form-control{
+	width: 100px !important;
+}
+#contacts div{
+	padding-left: 5%;
+	color: white;
+}
+#contacts i {
+	font-size: 25px;
+}
+#contacts .row {
+	font-size: 18px;
+}
+#contacts hr {
+	border-top: 3px solid rgb(73, 102, 27);
+	width: 50%;
+	margin-left: 0;
+}
+#feedback {
+	background: white ! important;
+	padding: 5%;
+	border-radius: 3%;
+}
+
