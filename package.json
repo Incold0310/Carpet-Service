@@ -1,0 +1,25 @@
+{
+  "name": "carpet-service",
+  "version": "1.0.0",
+  "description": "Сайт компании ООО \"Сервис Ковров\"",
+  "main": "./JS/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incold0310/Carpet-Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Incold0310/Carpet-Service/issues"
+  },
+  "homepage": "https://github.com/Incold0310/Carpet-Service#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
