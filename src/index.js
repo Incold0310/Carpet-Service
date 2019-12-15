@@ -2,6 +2,7 @@ import clickOnMenuItem from './modules/clickOnMenuItem.js';
 import setValueInTd from './modules/setValueInCalcColumns.js';
 import {changeColOfCarpets, changePeriod_manualInput} from './modules/calculator.js';
 import choiceForm from './modules/feedback.js';
+import './style.css';
 
 setValueInTd();
 
