@@ -5,14 +5,14 @@ body {
 #divBeforeMenu img {
 	width: 150px;
 }
-#divBeforeMenu .offset-2 i{
+#divBeforeMenu .col-3 i{
 	float: left;
 	border: none;
-	font-size: 50px;
+	font-size: 60px;
 	margin-right: 5px;
 }
-#divBeforeMenu .offset-2 {
-	font-size: 15px;
+#divBeforeMenu .col-3 {
+	font-size: 20px;
 }
 #divBeforeMenu .row div {
 	padding: 0;
