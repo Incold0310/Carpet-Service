@@ -2,17 +2,21 @@ body {
 	margin: 0;
 	padding: 0;
 }
-#divBeforeMenu img {
-	width: 150px;
+#divBeforeMenu .col-2 a {
+	text-decoration: none;
+	font-style: italic;
+	color: rgb(48, 106, 26);
+	text-shadow: 0 0 5px rgb(31, 149, 25);
+	font-size: 80px;
 }
-#divBeforeMenu .offset-2 i{
+#divBeforeMenu .col-3 i{
 	float: left;
 	border: none;
-	font-size: 50px;
+	font-size: 60px;
 	margin-right: 5px;
 }
-#divBeforeMenu .offset-2 {
-	font-size: 15px;
+#divBeforeMenu .col-3 {
+	font-size: 20px;
 }
 #divBeforeMenu .row div {
 	padding: 0;
