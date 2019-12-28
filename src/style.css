@@ -2,6 +2,14 @@ body {
 	margin: 0;
 	padding: 0;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
 #divBeforeMenu .col-2 a {
 	text-decoration: none;
 	font-style: italic;
@@ -103,10 +111,23 @@ body {
 #btnGroupInFeedback button {
 	font-size: 150% !important;
 }
-#btnGroupInFeedback button i {
+#btnGroupInFeedback button i{
 	font-size: 150% !important;
 	position: absolute;
 	right: 10%;
+	visibility: hidden;
+}
+#pageNext button span{
+	margin-right: 5%;
+	float: left;
+}
+#pageNext button {
+	width: 20% !important;
+}
+#feedback h3 + button {
+	position: absolute;
+	top: 5%;
+	right: 5%;
 	visibility: hidden;
 }
 #btnGroupInFeedback button:hover > i {
@@ -121,6 +142,10 @@ body {
 }
 .input-group .form-control{
 	width: 100px !important;
+}
+#pagePrev:focus, #pagePrev:active, #pageNext:focus, #pageNext:active {
+   outline: none !important;
+   box-shadow: none;
 }
 #contacts div{
 	padding-left: 5%;

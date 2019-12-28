@@ -1,12 +1,14 @@
 import clickOnMenuItem from './modules/clickOnMenuItem.js';
 import setValueInTd from './modules/setValueInCalcColumns.js';
 import {changeColOfCarpets, changePeriod_manualInput} from './modules/calculator.js';
-import choiceForm from './modules/feedback.js';
+import {choiceForm, changePage, checkRequiredField, returnToChoiceForm} from './modules/feedback.js';
+import sendMessageOnEmail from './modules/forEmail.js';
 import './style.css';
 
 setValueInTd();
 
 document.querySelector('#menu ul').addEventListener("click", clickOnMenuItem);
+
 document.querySelector('#menu button').addEventListener("click", () => {
   document.querySelector('#feedback').scrollIntoView({
     block: "center",
@@ -15,12 +17,25 @@ document.querySelector('#menu button').addEventListener("click", () => {
   });
 });
 
-document.querySelector('#calculator .row .col-7').onclick = (event) => {
-  changeColOfCarpets(event);
-};
+document.querySelector('#calculator .row .col-7').addEventListener('click', changeColOfCarpets);
 
-document.querySelector('#calculator .row .col-7').onchange = (event) => {
-  changePeriod_manualInput(event);
-};
+document.querySelector('#calculator .row .col-7').addEventListener('change', changePeriod_manualInput);
 
-document.querySelector('#btnGroupInFeedback').addEventListener('click', choiceForm)
+document.querySelector('#btnGroupInFeedback').addEventListener('click', (event)=>{
+  if (!event.target.closest('button')) return;
+  choiceForm(event);
+  document.querySelector('#feedback h3 + button').style.visibility="visible";
+});
+
+document.querySelector('#feedback h3 + button').addEventListener('click', returnToChoiceForm);
+
+document.querySelector('#pageNext button').addEventListener('click', (event)=> {
+  if (checkRequiredField(event)) changePage(event);
+  else return;
+});
+
+document.querySelector('#submitButton button').addEventListener('click', (event)=> {
+  if (checkRequiredField(event)) sendMessageOnEmail(event);
+  else return;
+  returnToChoiceForm();
+});

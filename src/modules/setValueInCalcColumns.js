@@ -11,7 +11,7 @@ function setValueInTd() {
     chooseCol[i].innerHTML = `<div class="input-group">
 	  								<div class="input-group-prepend">
 	   									<button class="btn btn-outline-danger" type="button"><i class="fa fa-minus"></i></button>
-	  								</div><input class="form-control calcInput" value="0"><div class="input-group-append">
+	  								</div><input class="form-control calcInput" value="0" type="number"><div class="input-group-append">
 	    								<button class="btn btn-outline-success plusValue" type="button"><i class="fa fa-plus"></i></button>
 	  								</div>
 									</div>`;

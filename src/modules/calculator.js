@@ -77,6 +77,7 @@ function changePeriod_manualInput(event) {
     calculateResult((newPrice - pastPrice.price) * carpertNumber, "plus");
     pastPrice.price = newPrice;
   } else if (manualInput) {
+    if (!manualInput.value || manualInput.value<0) manualInput.value=0;
     let pastNumber = trProperties[tr];
     let newNumber = manualInput.value;
     let carpetPrice = trProperties[tr].price;
