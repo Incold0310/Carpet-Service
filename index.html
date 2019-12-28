@@ -349,9 +349,18 @@
 
 			<div class="col-7"  id="feedback">
 				<h3>Обратная связь</h3>
+				<button class="btn"><i class="fa fa-close fa-2x" style="color: red;"></i></button>
 				<br />
-
 				<div>
+					<form name="emailForm" method="post">
+						<div id="submitButton" style="display: none;">
+							<br />
+						  <button type="submit" class="btn btn-lg btn-outline-success" id="submitRequest">Отправить</button>
+						</div>
+						<div class="text-right" id="pageNext" style="display: none;">
+							<button type="button" class="btn btn-lg btn-outline-primary"><span>Далее</span><i class="fa fa-arrow-right"></i></button>
+						</div>
+				  </form>
 					<div id="btnGroupInFeedback">
 						<button type="button" class="btn btn-outline-primary btn-block btn-lg">
 							<span>ЗАКАЗАТЬ ЗВОНОК</span>
