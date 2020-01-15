@@ -1,4 +1,4 @@
-import {form_call, form_contractFirst, form_contractSecond, form_commercial, addFields} from './differentForms.js';
+import * as form from './differentForms.js';
 
 let inputs;
 
@@ -8,23 +8,38 @@ function choiceForm(event) {
   event.currentTarget.style.display="none";
   switch (button.children[0].textContent) {
     case 'ЗАКАЗАТЬ ЗВОНОК':
-        inputs = form_call;
+        inputs = form.form_call;
         pushInputs(inputs, button.children[0].textContent);
         document.querySelector('#submitButton').style.display='block';
       break;
     case 'ПОЛУЧИТЬ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ':
-        inputs = form_commercial;
+        inputs = form.form_commercial;
         pushInputs(inputs, button.children[0].textContent);
         document.querySelector('#submitButton').style.display='block';
         document.querySelector('#addCarpet').addEventListener('click', (event)=>{
           event.preventDefault();
-          document.querySelector('#selectedCarpets').insertAdjacentHTML('beforebegin', addFields);
+          document.querySelector('#selectedCarpets').insertAdjacentHTML('beforebegin', form.addFields);
         });
       break;
     case 'ЗАКЛЮЧИТЬ ДОГОВОР НА АРЕНДУ КОВРОВ':
-        inputs = form_contractFirst;
+        inputs = form.form_contractFile;
         pushInputs(inputs, button.children[0].textContent);
-        document.querySelector('#pageNext').style.display = "block";
+        document.querySelector('#reqFile input').addEventListener('change', (event)=>{
+          let file = event.currentTarget.value;
+          file = file.replace(/\\/g, '/').split('/').pop();
+          document.querySelector('#fileName').innerHTML = file;
+          document.querySelector('#manualReq').remove();
+          document.querySelector('#submitButton').style.display='block';
+        });
+        document.querySelector('#manualReq').addEventListener('click', ()=>{
+          document.querySelector('#feedback form div').remove();
+          inputs = form.form_contractFirst;
+          pushInputs(inputs, button.children[0].textContent);
+          document.querySelector('#pageNext button').addEventListener('click', (event)=> {
+            if (checkRequiredField(event)) changePage(event);
+            else return;
+          });
+        });
       break;
     }
   }
@@ -36,8 +51,7 @@ function pushInputs(inputs, header) {
 
 function changePage(event) {
   const header = 'ЗАКЛЮЧИТЬ ДОГОВОР НА АРЕНДУ КОВРОВ';
-  event.currentTarget.parentNode.style.display = "none";
-  inputs = form_contractSecond;
+  inputs = form.form_contractSecond;
   document.querySelector('#feedback form div').remove();
   pushInputs(inputs, header);
   document.querySelector('#submitButton').style.display='block';
@@ -56,9 +70,6 @@ function checkRequiredField(event) {
 }
 
 function returnToChoiceForm(event) {
-  if (document.querySelector('#feedback h3').textContent=='ЗАКЛЮЧИТЬ ДОГОВОР НА АРЕНДУ КОВРОВ') {
-    document.querySelector('#pageNext').style.display="none";
-  }
   document.querySelector('#feedback form div').remove();
   document.querySelector('#btnGroupInFeedback').style.display="block";
   event.currentTarget.style.visibility="hidden";
@@ -66,4 +77,4 @@ function returnToChoiceForm(event) {
   document.querySelector('#submitButton').style.display='none';
 }
 
-export {choiceForm, changePage, checkRequiredField, returnToChoiceForm};
+export {choiceForm, checkRequiredField, returnToChoiceForm};

@@ -15,6 +15,36 @@ const form_call = `<div>
   </div>
 </div>`;
 
+const form_contractFile = `<div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-center align-items-center text-center" id="reqFile">
+      <label>
+      <input type="file" name="reqFile" aria-describedby="reqFileHelpBlock">
+      <small id="reqFileHelpBlock" class="form-text text-muted">
+        Выберите файл, пожалуйста!
+      </small>
+      <div>
+        <div class="row">
+          <div class="col-3 d-flex justify-content-center align-items-center text-center">
+            <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-9 d-flex justify-content-center align-items-center text-center">
+            <span>Выберите файл с реквизитами компании</span>
+          </div>
+        </div>
+      </div>
+      </label>
+    </div>
+    <div class="col-6 d-flex align-items-center text-left">
+      <div id="fileName"></div>
+    </div>
+  </div>
+  <div class="text-right">
+    <br/>
+    <button type="button" class="btn btn-outline-info btn-lg" id="manualReq">Ввести реквизиты вручную</button>
+  </div>
+</div>`;
+
 const form_contractFirst = `<div>
     <div class="form-group">
       <label for="inputNameCompany" class="requiredField">Наименование организации</label>
@@ -26,21 +56,21 @@ const form_contractFirst = `<div>
     <div class="form-row">
       <div class="form-group col-4">
         <label for="inputINN" class="requiredField">ИНН</label>
-        <input class="form-control" id="inputINN" placeholder="ИНН" aria-describedby="INNHelpBlock" name="INN">
+        <input class="form-control" type="number" id="inputINN" placeholder="ИНН" aria-describedby="INNHelpBlock" name="INN">
         <small id="INNHelpBlock" class="form-text text-muted">
             Обязательное поле ввода!
         </small>
       </div>
       <div class="form-group col-4">
         <label for="inputKPP" class="requiredField">КПП</label>
-        <input class="form-control" id="inputKPP" placeholder="КПП" aria-describedby="KPPHelpBlock" name="KPP">
+        <input class="form-control" id="inputKPP" type="number" placeholder="КПП" aria-describedby="KPPHelpBlock" name="KPP">
         <small id="KPPHelpBlock" class="form-text text-muted">
             Обязательное поле ввода!
         </small>
       </div>
       <div class="form-group col-4">
         <label for="inputOGRN" class="requiredField">ОГРН</label>
-        <input class="form-control" id="inputOGRN" placeholder="ОГРН" aria-describedby="OGRNHelpBlock" name="INN">
+        <input class="form-control" type="number" id="inputOGRN" placeholder="ОГРН" aria-describedby="OGRNHelpBlock" name="INN">
         <small id="OGRNHelpBlock" class="form-text text-muted">
             Обязательное поле ввода!
         </small>
@@ -60,8 +90,11 @@ const form_contractFirst = `<div>
           Обязательное поле ввода!
       </small>
     </div>
+    <div class="text-right" id="pageNext">
+      <br/>
+      <button type="button" class="btn btn-lg btn-outline-primary"><span>Далее</span><i class="fa fa-arrow-right"></i></button>
     </div>
-    </div>`;
+  </div>`;
 
 const form_contractSecond = `<div>
   <div class="form-group">
@@ -132,7 +165,7 @@ const form_commercial = `
       </div>
       <div class="form-group col-6">
         <label for="inputINN" class="requiredField">ИНН</label>
-        <input class="form-control" id="inputINN" placeholder="ИНН" aria-describedby="INNHelpBlock" name="INN">
+        <input class="form-control" type="number" id="inputINN" placeholder="ИНН" aria-describedby="INNHelpBlock" name="INN">
         <small id="INNHelpBlock" class="form-text text-muted">
             Обязательное поле ввода!
         </small>
@@ -174,4 +207,4 @@ const addFields = `<div class="form-row">
 </div>
 </div>`;
 
-export {form_call, form_contractFirst, form_contractSecond, form_commercial, addFields};
+export {form_call, form_contractFile, form_contractFirst, form_contractSecond, form_commercial, addFields};

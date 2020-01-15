@@ -1,7 +1,7 @@
 import clickOnMenuItem from './modules/clickOnMenuItem.js';
 import setValueInTd from './modules/setValueInCalcColumns.js';
 import {changeColOfCarpets, changePeriod_manualInput} from './modules/calculator.js';
-import {choiceForm, changePage, checkRequiredField, returnToChoiceForm} from './modules/feedback.js';
+import {choiceForm, checkRequiredField, returnToChoiceForm} from './modules/feedback.js';
 import sendMessageOnEmail from './modules/forEmail.js';
 import './style.css';
 
@@ -28,11 +28,6 @@ document.querySelector('#btnGroupInFeedback').addEventListener('click', (event)=
 });
 
 document.querySelector('#feedback h3 + button').addEventListener('click', returnToChoiceForm);
-
-document.querySelector('#pageNext button').addEventListener('click', (event)=> {
-  if (checkRequiredField(event)) changePage(event);
-  else return;
-});
 
 document.querySelector('#submitButton button').addEventListener('click', (event)=> {
   if (checkRequiredField(event)) sendMessageOnEmail(event);
