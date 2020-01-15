@@ -71,6 +71,37 @@ button:focus, button:active {
 	height: 20px !important;
 	border-radius: 50%;
 }
+#mainSlider .carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	/* margin-left: -10% !important; */
+	display: block;
+	bottom: initial;
+	padding: 0;
+}
+#mainSlider .carousel-caption .bigHeadline {
+	font-size: 350%;
+	border-radius: 10%;
+	background-color: rgba(36, 34, 34, 0.5);
+	animation-duration:1.5s;
+	animation-timing-function: linear;
+	animation-name: effect;
+}
+@keyframes effect {
+	from {transform: translateY(-200%);}
+	to {transform: translateY(0%);}
+}
+/* #mainSlider .carousel-caption .smallHeadline {
+	font-size: 18px;
+	background-color: rgba(0, 0, 29, 0.5);
+	animation-duration:1s;
+	animation-timing-function: linear;
+	animation-name: effect2;
+}
+@keyframes effect2 {
+	from {transform: translateY(200%);}
+	to {transform: translateY(0%);}
+} */
 #aboutCarpets p {
 	font-size: 125%;
 }
