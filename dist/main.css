@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -24,7 +25,7 @@ button:focus, button:active {
 #divBeforeMenu .col-3 a {
 	text-decoration: none;
 	font-style: italic;
-	color: rgb(48, 106, 26);
+	color: rgb(14, 115, 33);;
 	text-shadow: 0 0 5px rgb(31, 149, 25);
 	font-size: 240%;
 	margin-left: 5%;
@@ -58,10 +59,10 @@ button:focus, button:active {
 	color: black;
 }
 .activeMenuLink {
-	border: 3px solid #00cc00;
+	border: 3px solid rgb(14, 115, 33);;
 }
 .activeMenuLink a {
-	color: #00cc00 !important;
+	color: rgb(14, 115, 33) !important;
 }
 #mainSlider img {
 	height: 500px;
@@ -102,13 +103,16 @@ button:focus, button:active {
 	from {transform: translateY(200%);}
 	to {transform: translateY(0%);}
 } */
+#slider img {
+	height: 400px;
+}
 #aboutCarpets p {
 	font-size: 125%;
 }
 #useAdvantages i {
 	font-size: 300%;
 	margin-top: 5%;
-	color: rgb(37, 122, 51);
+	color: rgb(14, 115, 33);
 }
 #useAdvantages p {
 	font-size: 120%;
@@ -117,14 +121,67 @@ button:focus, button:active {
 	border-right: 0.5px solid rgb(170, 170, 170);
 }
 #useAdvantages .col:hover {
-	background: rgb(37, 122, 51);
+	background: rgb(14, 115, 33);
 	color: white;
 }
 #useAdvantages .col:hover > i {
 	color: rgb(193, 255, 131);
 }
+thead th {
+	background: rgb(14, 115, 33);
+	color: white;
+}
+#calculator {
+	background: white;
+	position: absolute;
+	height: 100%;
+	transform: translateX(100%);
+}
+#closeCalc {
+	z-index: 1000;
+	right: 5%;
+	top: -5%;
+	position: absolute;
+}
+@keyframes showCalc {
+	0% { transform: translateX(100%); }
+	25% { transform: translateX(75%); }
+	50% { transform: translateX(50%); }
+	75% { transform: translateX(25%); }
+  100% { transform: translateX(0); }
+}
+@keyframes hiddenCalc {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(25%); }
+	50% { transform: translateX(50%); }
+	75% { transform: translateX(75%); }
+  100% { transform: translateX(100%); }
+}
+#priceList .row{
+	position: relative;
+}
 #priceList h5 {
 	color: rgb(150, 150, 150);
+}
+#priceList .col-3 i {
+	margin-top: 30%;
+	animation: calcColor 3s infinite alternate, jump 2s infinite;
+	transform-origin: bottom;
+	animation-timing-function: linear;
+}
+@keyframes calcColor {
+	0% {color: rgb(14, 115, 33);}
+	50% {color: rgb(20, 159, 46);}
+	100% {color: rgb(53, 245, 89);}
+}
+@keyframes jump {
+	0% { transform: scale(1,1) translateY(0); }
+  10% { transform: scale(1.1,.9) translateY(0); }
+  30% { transform: scale(.9,1.1) translateY(-40px); }
+  50% { transform: scale(1.05,.95) translateY(0); }
+  57% { transform: scale(1,1) translateY(-7px); }
+  64% { transform: scale(1,1) translateY(0); }
+  100% { transform: scale(1,1) translateY(0); }
 }
 #finishPrice {
 	width: 200px;

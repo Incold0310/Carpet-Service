@@ -17,6 +17,16 @@ document.querySelector('#menu button').addEventListener("click", () => {
   });
 });
 
+document.querySelector('#showCalculator').addEventListener('click', ()=>{
+  document.querySelector('#calculator').style.animation='showCalc 1s 1 linear';
+  document.querySelector('#calculator').style.animationFillMode='forwards';
+});
+
+document.querySelector('#closeCalc').addEventListener('click', ()=>{
+  document.querySelector('#calculator').style.animation='hiddenCalc 1s 1 linear';
+  document.querySelector('#calculator').style.animationFillMode='forwards';
+});
+
 document.querySelector('#calculator .row .col-7').addEventListener('click', changeColOfCarpets);
 
 document.querySelector('#calculator .row .col-7').addEventListener('change', changePeriod_manualInput);
