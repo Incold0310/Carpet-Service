@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -25,7 +25,7 @@ button:focus, button:active {
 #divBeforeMenu .col-3 a {
 	text-decoration: none;
 	font-style: italic;
-	color: rgb(14, 115, 33);;
+	color: rgb(26, 131, 90);
 	text-shadow: 0 0 5px rgb(31, 149, 25);
 	font-size: 240%;
 	margin-left: 5%;
@@ -59,10 +59,10 @@ button:focus, button:active {
 	color: black;
 }
 .activeMenuLink {
-	border: 3px solid rgb(14, 115, 33);;
+	border: 3px solid rgb(26, 131, 90);
 }
 .activeMenuLink a {
-	color: rgb(14, 115, 33) !important;
+	color: rgb(26, 131, 90) !important;
 }
 #mainSlider img {
 	height: 500px;
@@ -75,7 +75,6 @@ button:focus, button:active {
 #mainSlider .carousel-caption {
 	top: 50%;
 	transform: translateY(-50%);
-	/* margin-left: -10% !important; */
 	display: block;
 	bottom: initial;
 	padding: 0;
@@ -83,7 +82,7 @@ button:focus, button:active {
 #mainSlider .carousel-caption .bigHeadline {
 	font-size: 350%;
 	border-radius: 10%;
-	background-color: rgba(36, 34, 34, 0.5);
+	text-shadow: 0 0 10px black;
 	animation-duration:1.5s;
 	animation-timing-function: linear;
 	animation-name: effect;
@@ -92,27 +91,23 @@ button:focus, button:active {
 	from {transform: translateY(-200%);}
 	to {transform: translateY(0%);}
 }
-/* #mainSlider .carousel-caption .smallHeadline {
-	font-size: 18px;
-	background-color: rgba(0, 0, 29, 0.5);
-	animation-duration:1s;
-	animation-timing-function: linear;
-	animation-name: effect2;
-}
-@keyframes effect2 {
-	from {transform: translateY(200%);}
-	to {transform: translateY(0%);}
-} */
 #slider img {
 	height: 400px;
 }
 #aboutCarpets p {
 	font-size: 125%;
 }
+#useAdvantages {
+   position: relative;
+	 background: url(images/carpetClean.jpg), rgba(205, 247, 193, 0.5);
+	 background-blend-mode: multiply;
+	 border-top-left-radius: 100% 20%;
+	 border-bottom-right-radius: 100% 20%;
+}
 #useAdvantages i {
 	font-size: 300%;
 	margin-top: 5%;
-	color: rgb(14, 115, 33);
+	color: rgb(26, 131, 90);
 }
 #useAdvantages p {
 	font-size: 120%;
@@ -121,14 +116,14 @@ button:focus, button:active {
 	border-right: 0.5px solid rgb(170, 170, 170);
 }
 #useAdvantages .col:hover {
-	background: rgb(14, 115, 33);
+	background: rgb(26, 131, 90);
 	color: white;
 }
 #useAdvantages .col:hover > i {
 	color: rgb(193, 255, 131);
 }
 thead th {
-	background: rgb(14, 115, 33);
+	background: rgb(26, 131, 90);
 	color: white;
 }
 #calculator {
@@ -208,7 +203,7 @@ thead th {
 	border: 1px solid red;
 }
 #ourContacts {
-	background: rgb(14, 115, 33);
+	background: rgb(26, 131, 90);
 }
 #btnGroupInFeedback button {
 	font-size: 150% !important;
@@ -236,6 +231,8 @@ thead th {
 	background: #1f8e2b;
 	border-radius: 10px;
 	color: #fff;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
 }
 #reqFile:hover {
 	background: #1acf23;
@@ -280,13 +277,63 @@ thead th {
 	font-size: 18px;
 }
 #contacts hr {
-	border-top: 3px solid rgb(73, 102, 27);
+	border-top: 3px solid rgb(22, 94, 91);
 	width: 50%;
 	margin-left: 0;
 }
 #feedback {
 	background: white ! important;
 	padding: 5%;
+	margin-left: 5%;
 	border-radius: 3%;
+	margin-bottom: 5%;
+}
+.footerDivs:first-child a {
+	color: #999999;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 10px;
+}
+.footerDivs:first-child a:not(:last-of-type)::after {
+	content: "|";
+	color: #999999;
+	font-size: 20px;
+	margin-left: 10px;
+}
+.footerDivs:first-child span {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999999;
+}
+.footerDivs:last-child div {
+	float: left;
+	height: 50px;
+	width: 50px;
+	font-size: 30px;
+	margin-right: 25px;
+	padding: 0;
+	border-radius: 50%;
+	background: #333333;
+}
+.footerDivs:last-child div:first-child {
+	margin-left: 20%;
+}
+.footerDivs:last-child i {
+	color: rgb(170, 170, 171) !important;
+}
+.footerDivs img {
+	height: 40px;
+}
+.footerDivs:nth-child(2) {
+	color: white;
+	font-style: italic;
+	font-size: 40px;
+}
+.footerDivs {
+	padding: 5px;
+}
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
